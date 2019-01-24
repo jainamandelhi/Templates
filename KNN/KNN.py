@@ -102,3 +102,14 @@ for s in t:
 plt.xlabel('Training set proportion (%)')
 plt.ylabel('accuracy');
 #.......................................................................................
+
+"""
+COMPARING TRAIN AND TEST SCORE TO DECREASE OVERFITTING
+"""
+#......................................................................................
+from adspy_shared_utilities import plot_two_class_knn
+
+plot_two_class_knn(X_train.values[:,0:2], y_train.values, 1, 'uniform', X_test.values[:,0:2], y_test.values)
+plot_two_class_knn(X_train.values[:,0:2], y_train.values, 3, 'uniform', X_test.values[:,0:2], y_test.values)
+plot_two_class_knn(X_train.values[:,0:2], y_train.values, 7, 'uniform', X_test.values[:,0:2], y_test.values)
+#.............................................................................................................
